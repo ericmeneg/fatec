@@ -1,0 +1,39 @@
+#main{
+    width: 90%;
+    margin: 0 auto;/* top/bottom - 0; left/right - auto */
+}
+h1{
+    text-align: center;
+    line-height: 300%;
+}
+#dados-pessoais{
+    text-align: center;
+}
+#dados-contato, #foto{
+    float: left;
+}
+#dados-contato{
+    width: 60%;
+    text-align: center;
+}
+#foto{
+    width: 40%;
+    text-align: left;
+}
+#foto img{
+    width: 15vw;
+    height: 25vh;
+}
+href{
+    color: #000000;
+}
+#formacao{
+    clear: left;
+    text-align: center;
+}
+#experiencias-profissionais{
+    text-align: center;
+}
+#informacoes-complementares p{
+    text-align: center;
+}
