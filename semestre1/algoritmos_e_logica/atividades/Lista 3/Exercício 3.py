@@ -28,6 +28,4 @@ while execucao == True:
                 print("Dado inválido inserido para nota do exame, tente um valor maior ou igual a zero.")
         execucao = False
     else:
-        print("Número inválido digitado, verifique os dados e tente novamente")
-
-        
+        print("Número inválido digitado, verifique os dados e tente novamente")   

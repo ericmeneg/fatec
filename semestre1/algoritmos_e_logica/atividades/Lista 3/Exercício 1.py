@@ -10,4 +10,3 @@ elif valor == 4 or valor == 9:
 elif valor == 6 or valor == 7 or valor == 8:
     valor = float(valor/9)
     print("O valor da divisão do número digitado por 9 é: %.2f" %valor)
-

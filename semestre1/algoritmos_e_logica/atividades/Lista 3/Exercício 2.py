@@ -17,4 +17,3 @@ while execucao == True:
         execucao = False
     else:
         print("Número inválido digitado, verifique os dados e tente novamente")
-
