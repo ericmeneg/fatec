@@ -25,11 +25,11 @@ def calculo_media(v1_,v2_):
         m_ = (v1_+v2_)/2
         return m_
 
-print("Nome: Eric Menegon RA:1051392411019 Turma DSM 1ºSEM 2024")
-
 status = "inicial"
 n1,n2 = coleta_notas(status)
 mg = calculo_media(n1,n2)
+
+print("Nome: Eric Menegon RA:1051392411019 Turma DSM 1ºSEM 2024")
 
 if mg >= 7:
     print("Sua média foi:",mg)

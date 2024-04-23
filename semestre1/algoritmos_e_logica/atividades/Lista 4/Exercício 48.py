@@ -10,7 +10,7 @@ def coleta_salario():
     return salario_
 
 def acrescimo(salario_,acrescimo):
-    return salario_*acrescimo
+    return round(salario_*acrescimo,2)
 
 salario = coleta_salario()
 if salario <= 1500:
@@ -22,5 +22,6 @@ else:
 
 aumento = str(novosalario - salario)
 novosalario = str(novosalario)
+print("Nome: Eric Menegon RA:1051392411019 Turma DSM 1ºSEM 2024")
 print("Seu salário após o aumento é de R$"+novosalario)
 print("Aumento de R$"+aumento)

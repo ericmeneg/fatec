@@ -23,6 +23,8 @@ while True:
     else:
         valordescontado = valortotal * 0.8
 
+    print("Nome: Eric Menegon RA:1051392411019 Turma DSM 1ºSEM 2024")
+
     print("Valor total:",valortotal)
     print("Valor com desconto:",valordescontado)
 

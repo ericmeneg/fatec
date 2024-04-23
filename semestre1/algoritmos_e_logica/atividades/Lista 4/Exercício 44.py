@@ -1,21 +1,27 @@
-import math
 valor = float(input("Digite um valor: "))
 
 def pot(x,y):
     pot = x**y
     return pot
 
-def dif(x,y):  
+def fat(x):  
+    contagem = 1
+    fat = x
+    while contagem<x:
+        fat = fat*(x-contagem)
+        contagem += 1
+    return fat
 
 def div(divisor,dividendo):
     div = divisor/dividendo
     return div
 
 print("Nome: Eric Menegon RA:1051392411019 Turma DSM 1ºSEM 2024")
-if valor<0:
-    print("O módulo do valor inserido é:",modulo(valor))
-if valor>10:
-    valor2 = float(input("Digite um segundo valor:"))
-    print("A diferença entre os valores inseridos é %.2f" %dif(valor,valor2))
+if valor == 1 or valor == 2:
+    print("O valor do número digitado ao cubo é:",pot(valor,3))
+elif (valor % 3) == 0 and valor>=0:
+    print("O fatorial do valor inserido é: ",fat(valor))
+elif valor == 4 or valor == 5 or valor == 7 or valor == 8:
+    print("O valor da divisão do número dado por 9 é: ",(div(valor,9)))
 else:
-    print("O valor da divisão do número dado por 5 é: ",(div(valor,5)))
+    print("Valor inválido")

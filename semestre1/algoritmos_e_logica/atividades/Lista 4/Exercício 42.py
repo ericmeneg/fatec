@@ -17,11 +17,12 @@ def coleta_notas():
     return n1_,n2_
 
 n1,n2 = coleta_notas()
-print("Nome: Eric Menegon RA:1051392411019 Turma DSM 1ºSEM 2024")
 mg = calculo_media(n1,n2)
+print("Nome: Eric Menegon RA:1051392411019 Turma DSM 1ºSEM 2024")
 if mg >= 7:
     print("Sua média foi:",mg)
     print("Parabéns, você está aprovado!")
 elif mg < 7 and n1 >= 0 and n2 >= 0:
     print("Sua média foi:",mg)
     print("Você  ainda  tem  uma  chance!  Estude  mais  para  o exame.")
+    
