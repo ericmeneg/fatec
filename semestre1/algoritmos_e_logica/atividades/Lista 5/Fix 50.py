@@ -1,5 +1,3 @@
-#incompleto, erro múltiplos resultados (input= 1500)
-
 def verif(n):
     if n < 0:
         print("Digite um número válido")
@@ -18,6 +16,7 @@ while True:
     salario = float(input("Digite o seu salário: "))
     if verif(salario) == True:
         break
+print("Nome: Eric Menegon RA:1051392411019 Turma DSM 1ºSEM 2024")
 if interv(salario) == 1:
     novosalario = salario * 1.2
     print("Seu salário com aumento é de", novosalario)
