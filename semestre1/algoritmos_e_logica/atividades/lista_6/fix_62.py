@@ -1,4 +1,3 @@
-import os
 senhas = 0
 while True:
     with open("semestre1/algoritmos_e_logica/atividades/lista_6/senhas.txt","a+",encoding="utf-8") as doc:
