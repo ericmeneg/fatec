@@ -25,4 +25,4 @@ elif interv(salario) == 2:
     print("Seu salário com aumento é de", novosalario)
 elif interv(salario) == 3:
     novosalario = salario * 1.05
-    print("Seu salário com aumento é de", novosalario)
+    print("Seu salário com aumento é de", novosalario)  

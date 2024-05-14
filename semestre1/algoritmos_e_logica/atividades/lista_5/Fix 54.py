@@ -8,8 +8,8 @@ def coleta(p):
             break
     return n
 
-n1 = coleta(" P1 ")
-n2 = coleta(" P2 ")
+n1 = coleta(" P1")
+n2 = coleta(" P2")
 mg = ((n1*4)+(n2*6))/10
 
 print("Nome: Eric Menegon RA:1051392411019 Turma DSM 1ºSEM 2024")

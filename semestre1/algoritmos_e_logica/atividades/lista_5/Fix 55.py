@@ -26,8 +26,8 @@ def coleta(p):
             break
     return n
 
-n1 = coleta(" P1 ")
-n2 = coleta(" P2 ")
+n1 = coleta(" P1")
+n2 = coleta(" P2")
 mg = ((n1*4)+(n2*6))/10
 
 if mg >=9:

@@ -1,7 +1,7 @@
 while True:
     peso = float(input("Digite o peso: "))
     if peso < 0:
-        print("Digite um valor maio que 0")
+        print("Digite um valor maior que 0")
     else: 
         break
 while True:
@@ -18,8 +18,9 @@ while True:
         break
 
 print("Nome: Eric Menegon RA:1051392411019 Turma DSM 1ºSEM 2024") 
-if sexo == "m":
-    r = peso/(altura**2)
+r = peso/(altura**2)
+print("Seu IMC é:",r)
+if sexo == "f":
     if r>=24:
         print("Acima do peso")
     if r<19:
@@ -27,8 +28,7 @@ if sexo == "m":
     if 19<=r<24:
         print("Peso ideal")
 
-if sexo == "f":
-    r = peso/(altura**2)
+if sexo == "m":
     if r>=25:
         print("Acima do peso")
     if r<20:
