@@ -1,0 +1,1 @@
+Elaborar um algoritmo (programa) que determine se a pessoa está com no seuPeso Ideal (ou não)e IMC. Onde o usuário deverá digitar o peso, o sexo e a altura de uma determinada pessoa. Após a execução, deverá  exibir  se  esta  pessoa  está  ou  não  com  seu  peso  ideal.  Veja  tabela (a)  e  (b) da  relação peso/altura².

@@ -1,0 +1,7 @@
+.menu{
+    font-family: 'Arbutus Slab';
+    width: 100%;
+    background-color: #EB5D5D;
+    display: flex;
+    flex: auto;
+}

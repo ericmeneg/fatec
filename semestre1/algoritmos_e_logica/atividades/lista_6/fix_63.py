@@ -1,2 +1,5 @@
-nomedoarquivoaqui.split(" ") #para separar em uma lista contendo cada palavra?
-nomedoarquivoaqui.len() #tamanho da variável?
+with open("semestre1/algoritmos_e_logica/atividades/lista_6/mensagem.txt","r", encoding="utf-8") as doc:
+    texto = doc.read()
+    listadepalavras = texto.split(" ")
+    print(len(texto))
+    print(listadepalavras)

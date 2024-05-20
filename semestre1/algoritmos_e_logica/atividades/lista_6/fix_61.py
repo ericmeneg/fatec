@@ -1,6 +1,4 @@
 emails = 0
-import os
-print(os.getcwd())
 while True:
     with open("semestre1/algoritmos_e_logica/atividades/lista_6/email.txt","a+",encoding="utf-8") as doc:
         emailnovo = input("Digite um email para cadastrar: ")+"\n"
