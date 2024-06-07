@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula de Bootstrap</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+  <!--para centralizar os items da navbar, foi utilizado w-100 na <ul> e ml-auto em cada <li>-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav w-100">
+        <li class="nav-item ml-auto">
+          <a class="nav-link" href="index.html" title="Página inicial">Home</a>
+        </li>
+        <li class="nav-tem active ml-auto">
+          <a class="nav-link" href="contato.html" title="Entre em contato">Contato <span class="sr-only">(Página
+              atual)</span></a>
+        </li>
+        <li class="nav-item ml-auto">
+          <a class="nav-link" href="#" title="Veja os destaques">Destaques</a>
+        </li>
+        <li class="nav-item ml-auto">
+          <a class="nav-link" href="#" title="Consulte os preços">Preços</a>
+        </li>
+      </ul>
+      <!--aqui foi criada outra ul para fugir do alinhamento da primeira ul, eu acho que ficaria melhor deixando a imagem alinhada junto com os itens mas...................-->
+      <ul class="float-right">
+        <li style="list-style: none" ; class="mt-2">
+          <a style="text-decoration: none; color: white;" href="#">Imagem aqui</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- mt: margin top // mb: margin bottom -->
+  <div class="container mt-3 mb-3">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Contato</li>
+      </ol>
+    </nav>
+    <div>
+      <form name="frmenviar" id="frmenviar" method="post">
+        <div class="form-group">
+          <label for="txtemail">Endereço de email</label>
+          <input type="email" class="form-control" id="txtemail" aria-describedby="emailHelp" placeholder="Seu email"
+            name="txtemail">
+          <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+        </div>
+        <div class="form-group">
+          <label for="txtsenha">Senha</label>
+          <input type="password" class="form-control" id="txtsenha" placeholder="Senha" name="txtsenha">
+        </div>
+        <div class="form-group">
+          <label for="sel_uf">UF</label>
+          <select class="form-control form-control-lg" id="sel_uf" name="sel_uf">
+            <option disabled selected>Escolha um estado</option>
+            <option value="SP">São Paulo</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PR">Pará</option>
+            <option value="AM">Amazonas</option>
+            <option value="Outros">Outros</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-danger" name="btnenviar">Enviar</button>
+        <a href="index.html" title="voltar" class="btn btn-success">Voltar</a>
+      </form>
+    </div>
+    <!--Formulário básico-->
+    <!-- <div class="col-md-12 col-sm012">
+          <form>
+            <label for="txtemail">E-mail</label>
+            <input type="email" name="txtemail" id="txtemial" placeholder="endereço@provedor" maxlength="50" />
+            <br>
+            <label for="txtsenha">Senha</label>
+            <input type="password" name="txtsenha" id="txtsenha" maxlength="8" minlength="8" />
+            <br>
+            <input type="submit" name="btnenviar" id="btnenviar" value="Enviar">
+          </form>
+      </div> -->
+  </div>
+  </div>
+  <!-- Footer -->
+  <section id="footer">
+    <div class="container">
+      <div class="row text-center text-xs-center text-sm-left text-md-left">
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <h5>Quick links</h5>
+          <ul class="list-unstyled quick-links">
+            <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Home</a></li>
+            <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>About</a></li>
+            <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+            <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a>
+            </li>
+            <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <h5>Quick links</h5>
+          <ul class="list-unstyled quick-links">
+            <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Home</a></li>
+            <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>About</a></li>
+            <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+            <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a>
+            </li>
+            <li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <iframe id="videofooter" width="100%" height="315" src="https://www.youtube.com/embed/iVP-_TbExEw?si=1jjZo59Dl7wS2C0f"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <!-- <h5>Quick links</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Home</a></li>
+						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>About</a></li>
+						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+						<li><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+						<li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
+					</ul> -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+          <ul class="list-unstyled list-inline social text-center">
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i
+                  class="fa fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i
+                  class="fa fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i
+                  class="fa fa-google-plus"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02" target="_blank"><i
+                  class="fa fa-envelope"></i></a></li>
+          </ul>
+        </div>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+          <p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered
+            MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
+          <p class="h6">© All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com"
+              target="_blank">Sunlimetech</a></p>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </section>
+  <!-- ./Footer -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
