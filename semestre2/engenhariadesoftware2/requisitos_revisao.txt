@@ -1,0 +1,27 @@
+Q: 
+Para um sistema de caixa eltrônico: identifique quais são os stakeholders, os RF e os RNF.
+
+R:
+Os stakeholders do sistema são as agências bancárias atendidas pelo caixa e os proprietários de contas
+nessas agências.
+
+RF01 - Depositar dinheiro
+O usuário pode depositar dinheiro no caixa, aumentando o saldo na sua conta
+Prioridade: essencial.
+
+RF02 - Sacar dinheiro
+O usuário pode sacar dinheiro, contanto que a quantidade requisitada seja menor ou igual ao seu saldo,
+e  que a máquina esteja abastecida com dinheiro o suficiente.
+Prioridade: essencial.
+
+RF03 - Acessar conta
+O usuário pode acessar sua conta para visualizar seu saldo ou realizar operações mediante inserção do
+cartão e validação via senha ou biometria.
+Prioridade: essencial.
+
+RNF01 - A sessão do usuário deve se encerrar automaticamente após certo período de inatividade por
+questões de segurança
+Prioridade: importante.
+
+RNF02 - O caixa precisa apresentar a logo dos bancos cujo mesmo atende
+Prioridade: importante.
