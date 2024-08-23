@@ -11,6 +11,15 @@ app.get('/teste',(requisicao,resposta)=>{
         'msg': 'Teste'
     })
 })
+app.get('/tabuada',(req,res)=>{
+    const numero = 8
+    let delivery = ''
+    for (let i=1; i <= 10; i++){
+        let resultado = i * numero
+        delivery = delivery + (`<p>${i}x${numero}=${resultado}</p>`)
+    }
+    res.send(delivery)
+})
 
 app.listen(port, ()=>{
     console.log(`API rodando em http://localhost:${port}`)
