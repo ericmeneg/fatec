@@ -24,7 +24,7 @@ while True:
     if 0 < choice <= 3:
         break
     else:
-        print('Digite um núemro válido!')
+        print('Digite um número válido!')
 
 match choice:
     case 1:
