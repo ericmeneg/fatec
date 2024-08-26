@@ -46,4 +46,4 @@ function convertBinary(dec){
     return bin
 }
 let num = input('Digite o número a ser convertido: ')
-console.log(`${num} em binário é representado como ${convertBinary(28).access().join('')}`)
+console.log(`${num} em binário é representado como ${convertBinary(num).access().join('')}`)
