@@ -1,6 +1,11 @@
+import PromptSync from "prompt-sync"
+const input = PromptSync()
 class Stack {
     constructor(){
         this.items = []
+    }
+    access(){
+        return this.items
     }
     push(element){
         this.items.push(element)
@@ -31,8 +36,6 @@ function convertBinary(dec){
             break
         }
     }
-    console.log(stack)
-    console.log(stack.size())
     let bin = new Stack
     while(true){
         bin.push(stack.pop())
@@ -42,5 +45,5 @@ function convertBinary(dec){
     }
     return bin
 }
-
-console.log(convertBinary(10))
+let num = input('Digite o número a ser convertido: ')
+console.log(`${num} em binário é representado como ${convertBinary(28).access().join('')}`)

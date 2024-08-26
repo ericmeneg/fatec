@@ -1,0 +1,16 @@
+{
+  "name": "convert_bin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "convert_bin.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
