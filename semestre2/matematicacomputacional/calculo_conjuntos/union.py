@@ -13,4 +13,7 @@ def union(a,b):
                     toBoot.append(c[i])
     for i in toBoot:
         union.remove(i)
-    return sorter(union)
+    if union == []:
+        return 'vazio'
+    else:
+        return sorter(union)

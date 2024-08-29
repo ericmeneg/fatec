@@ -18,7 +18,10 @@ def sorter(u):
                 temp = u[i]
                 u[i] = u[j]
                 u[j] = temp
-    return u
+    if u == []:
+        return 'vazio'
+    else:
+        return u
 
 u = sorter(u)
 print(u)

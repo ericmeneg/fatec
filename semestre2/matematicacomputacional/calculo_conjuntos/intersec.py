@@ -4,4 +4,7 @@ def inter(a,b):
         for j in range(0,len(b)):
             if a[i] == b[j]:
                 c.append(a[i])
-    return c
+    if c == []:
+        return 'vazio'
+    else:
+        return c
