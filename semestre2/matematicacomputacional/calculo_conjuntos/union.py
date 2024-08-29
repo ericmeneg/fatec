@@ -1,5 +1,5 @@
 from intersec import inter
-from duplichecker import dupeBoot
+from sort import sorter
 
 def union(a,b):
     intersection = inter(a,b)
@@ -9,9 +9,8 @@ def union(a,b):
     for i in range(0,len(c)):
         for j in range(0,len(intersection)):
             if c[i] == intersection[j]:
-                toBoot.append(c[i])
-    # I need to make a function that goes through toBoot and removes all duplicates, so that only one instance of the
-    # item in duplicity is removed
+                if (toBoot.count(c[i])+1) < c.count(c[i]):
+                    toBoot.append(c[i])
     for i in toBoot:
         union.remove(i)
-    return union
+    return sorter(union)
