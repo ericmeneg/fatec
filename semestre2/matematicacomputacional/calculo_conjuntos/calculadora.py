@@ -57,3 +57,8 @@ match choice:
         aub = union(listaA,listaB)
         ainterb = inter(listaA,listaB)
         print(subtract(aub,ainterb))
+        '''Solução alternativa para diferença simétrica:
+        dif1 = subtract(listaA,listaB)
+        dif2 = subtract(listaB,listaA)
+        resultado = union(dif1,dif2)
+        print(resultado)'''
