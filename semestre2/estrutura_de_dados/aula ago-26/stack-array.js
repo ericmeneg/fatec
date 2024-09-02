@@ -1,3 +1,4 @@
+//stack (pilha): last in first out, o elemento mais recente é o primeiro a ser removido
 class Stack {
     constructor() {
         this.items = [];
@@ -28,10 +29,12 @@ class Stack {
     }
 }
 
-const stack = new Stack;
+module.exports = Stack;
+
+/*const stack = new Stack;
 console.log(stack.isEmpty())
 stack.push(5)
 stack.push(8)
 
 console.log(stack.peek())
-const coisa = new Stack
+const coisa = new Stack*/
