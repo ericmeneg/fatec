@@ -1,0 +1,50 @@
+Um hotel necessita de um sistema para controlar as estadias de seus hóspedes. Cada hóspede para reservar
+as diárias telefonam para o hotel ou enviam um email consultando a disponibilidade e os valores das
+diárias. No dia da hospedagem o hóspede é registrado. Durante a hospedagem ele pode solicitar serviços
+adicionais, fica disponível para consumo bebidas no frigobar, além de ser possível solicitar comidas da
+cozinha. O restaurante também funciona para almoço, para jantar somente lanches ou comidas a la carte.
+Para encerrar a estadia precisa quitar as diárias e verificar se houve gastos adicionais. 
+
+ 
+
+Nesse cenário, identique, quem são os stakeholders, quais são os requisitos funcionais. E, desenhe o
+diagrama de caso de uso que represente esse cenário.
+
+R:
+
+Stakeholders: Hóspedes, atendente do hotel, cozinheiros do restaurante.
+
+Requisitos funcionais:
+
+RF01 - Gerenciar hóspede
+Recepcionistas da bancada do hotel devem poder registrar um hóspede no sistema, além de editar algumas
+de suas informações, como dia de check-out (no caso de extensão da estadia), e mudança de quarto reservado
+(no caso de uma transferência).
+Prioridade: essencial
+
+RF02 - Editar conta
+Recepcionistas devem poder remover valores da conta de um hóspede, no caso do cancelamento de um pedido
+ou cobranças indevidas.
+Prioridade: importante
+
+RF03 - Realizar pedidos
+O hóspede deve poder solicitar o preparo de comidas para a cozinha, o valor deve ser adicionado a conta
+do mesmo.
+Prioridade: importante
+
+RF04 - Visualizar perfil
+O hóspede deve poder consultar a sua situação no site do hotel por meio de login e senha, criados
+aleatóriamente no momento do registro, enquanto recepcionistas podem consultar esses dados a qualquer
+momento, podendo ver o valor da conta, horário de check-in e check-out combinado, o quarto reservado,
+etc...
+Prioridade: essencial
+
+RF05 - Gerir pedidos
+Os funcionários da cozinha do hotel devem poder visualizar informações sobre os pedidos feitos por
+hóspedes (como items do pedido, e quarto para entrega), além de atualizar a situação dos mesmos
+(visto, entregue).
+Prioridade: importante
+
+RF06 - Realizar check-out
+Recepcionistas devem poder realizar a cobrança da conta ao fim da estadia de um hóspede.
+Prioridade: essencial
