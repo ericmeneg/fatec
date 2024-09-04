@@ -1,0 +1,14 @@
+Nome do caso de uso: cobrança
+Atores: Recepcionista
+Resumo: Esse caso de uso descreve as etapas necessárias para realizar a cobrança
+de hóspedes ao fim de sua estadia.
+Pré-condições: O hóspede deve ter feito check-in e sua estadia chegado ao fim, 
+recepcionista precisa estar logado no sistema
+Pós-condições: A conta do hóspede deve estar marcada como paga
+
+Fluxo principal
+1. Recepcionista seleciona o quarto do hóspede que está pagando a conta
+2. Sistema exibe uma fatura detalhada e exibe a quantidade total a ser paga
+3. Fatura é paga
+4. Sistema valida o pagamento
+5. Sistema emite comprovante
