@@ -5,4 +5,4 @@ if (num === 1){
     console.log("Num is not equal to 1, the value of num is" + num);
 }
 
-//Eric Vinicius
+//Eric Vinicius, Daniel Brito

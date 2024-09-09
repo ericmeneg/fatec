@@ -8,4 +8,4 @@ let num = 5
 (num === 1) ? num -- : num ++;
 console.log(num)
 
-//Eric Vinicius
+//Eric Vinicius, Daniel Brito

@@ -8,4 +8,4 @@ if (age<18){
         console.log('Is elderly')
     }
 
-//Eric Vinicius
+//Eric Vinicius, Daniel Brito

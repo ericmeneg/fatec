@@ -13,4 +13,4 @@ switch (month) {
         console.log('Month is not January, February or March')
 }
 
-//Eric Vinicius
+//Eric Vinicius, Daniel Brito

@@ -9,4 +9,4 @@ if (month === 1){
     console.log('Month is not Januray, February or March')
 }
 
-//Eric Vinicius
+//Eric Vinicius, Daniel Brito
