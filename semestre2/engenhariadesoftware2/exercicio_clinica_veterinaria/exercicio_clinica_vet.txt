@@ -1,0 +1,172 @@
+Faça o diagrama e as narrativas do seguinte cenário
+ 
+Clínica Veterinária
+- O cliente se dirige a clínica onde marca uma consulta com a secretária levando seu animal.
+Caso não sejam cadastrados, a secretária deve cadastrá-los.
+- Em cada sessão, o cliente deve informar os sintomas. O animal pode ter que passar por várias seções, dependendo do diagnóstico.
+- Durante a sessão, o veterinário pode solicitar exames a serem entregues na próxima seção.
+- A cada sessão gera-se um histórico e uma conta.
+- A secretária tem a responsabilidade de manter atualizado os cadastros dos clientes, médicos e animais.
+
+---------------------------------------//---------------------------------------
+
+Acessar histórico médico do animal
+Ator: Veterinário(a)
+Resumo: Esse caso de uso descreve como um(a) veterinário(a) deve poder exibir
+o histórico médico de um animal;
+
+Fluxo principal:
+1. Ator seleciona o animal desejado da lista de animais cadastrados
+2. Sistema exibe as operações básicas de C.R.U.D. possíveis, e a opção de visuali-
+zar o histórico médico do animal
+3. Ator seleciona a opção visualizar histórico médico
+4. Sistema exibe diretório contendo todos os arquivos cadastrados para o animal
+
+Restrições e validações:
+-O animal selecionado precisa ter históricos de visitas passadas
+
+Pré-condição:
+O ator deve estar logado como usuário com permissões de veterinário(a)
+
+Pós-condição:
+NA
+
+---------------------------------------//---------------------------------------
+
+Gerenciar dados do animal
+Atores: veterinário(a) e recepcionista;
+Resumo: Esse caso de uso descreve como médicos veterinários e recepcionistas
+devem poder realizar operações básicas de C.R.U.D. relacionadas aos dados dos
+animais;
+
+Fluxo principal:
+1. Ator seleciona o nome do animal. [Fluxo secundário 01]
+2. Sistema exibe os dados cadastrados sobre o animal.
+3. Ator altera os campos desejados.
+4. Sistema aceita e salva as alterações, vide validação. [Fluxo de excessão 1]
+
+Fluxo secundário 01:
+1. Ator seleciona a opção de cadastrar um novo animal.
+2. Sistema exibe os campos existentes para um animal.
+3. Ator preenche os campos desejados.
+4. Sistema salva o cadastro do novo animal, vide preenchimento de todos os campos
+obrigatórios e validação dos dados digitados. [Fluxo de exceção 01 e 02]
+
+Fluxo de exceção 01:
+1. Sistema informa o ator de que um dos campos digitados não atende as condi-
+ções de validação, destacando o campo com borda de cor vermelha.
+2. Ator tem a possibilidade de digitar um novo valor no campo ou cancelar a
+opeação.
+
+Fluxo de exceção 02:
+1. Sistema informa o ator de que um ou mais campos obrigatórios não foram
+preenchidos durante o cadastro inicial, destacando os campos problemáticos em 
+vermelho.
+2. Ator tem a possibilidade de preencher os campos ou cancelar a operação de
+cadastro.
+
+Restrições e validações:
+
+- Alguns campos existem como campos obrigatórios, um cadastro novo não pode ser
+realizado antes do preenchimento dos mesmos e uma operação de edição não pode ser
+feita sem que os mesmos estejam preenchidos por dados válidos.
+
+- Alguns campos possuem validação de dados digitados, devendo ser preenchidos
+por valores válidos vide as regras de negócio para serem considerados.
+
+- Dois cadastros com atributo chave idênticos não podem existir.
+
+Pré-condição:
+
+- Para edição de um cadastro, o mesmo deve existir no banco de dados
+
+Pós-condição:
+
+-No caso de exclusão de um cadastro o mesmo não deve ser visível ou acessível em
+nenhuma das telas do sistema.
+
+---------------------------------------//---------------------------------------
+
+Pagar conta
+Ator: Dono(a) do animal
+Resumo: Esse caso de uso descreve como o cliente pode realizar o pagamento da
+conta ao fim de uma consulta;
+
+Fluxo principal:
+1. Sistema exibe o total a ser pago, mediante digitação pelo(a) veterinário(a)
+2. Ator escolhe um método de pagamento
+3. Sistema exibe as intruções relevantes para o método escolhido
+4. Ator segue as intruções na tela
+5. Sistema exibe confirmação do recebimento do pagamento
+
+Fluxo secundário 01:
+1. Ator insere ou aproxima cartão
+2. Sistema pede pela senha
+3. Ator digita a senha
+4. Sistema valida a senha e exibe mensagem de sucesso [Fluxo excessão 01]
+
+Fluxo excessão 01:
+1. Sistema exibe que a senha digitada é inválida
+2. Ator digita a senha novamente
+
+Restrições e validações:
+
+- O método de pagamento selecionado deve apresentar saldo suficiente
+
+- A operação só pode ser realizada com comunicação estável com a internet
+
+Pré-condição:
+-Cliente e seu animal estão cadastrados e realizaram uma consulta
+
+Pós-condição:
+-Consulta em questão não apresenta mais o indicador de pagamento pendente no
+sistema
+
+---------------------------------------//---------------------------------------
+
+Gerenciar dados da consulta
+Atores: Veterinários e recepcionistas
+Resumo: Esse caso de uso descreve como os atores devem poder realizar operações
+de C.R.U.D. sobre os dados de consultas.
+
+Fluxo principal:
+1. Ator seleciona a consulta que quer editar. [Fluxo secundário 01]
+2. Sistema exibe os dados cadastrados sobre a consulta.
+3. Ator altera os campos desejados.
+4. Sistema aceita e salva as alterações, vide validação. [Fluxo de exceção 01]
+
+Fluxo secundário:
+1. Ator seleciona a opção de cadastrar nova consulta.
+2. Sistema exibe todos os campos existentes relacionados a consultas.
+3. Ator preenche os campos desejados
+4. Sistema aceita o cadastro, vide validação de campos e preenchimento de todos os
+campos obrigatórios [Fluxo de exceção 01 e 02]
+
+Fluxo de exceção 01:
+1. Sistema informa o ator de que um dos campos digitados não atende as condi-
+ções de validação, destacando o campo com borda de cor vermelha.
+2. Ator tem a possibilidade de digitar um novo valor no campo ou cancelar a
+opeação.
+
+Fluxo de exceção 02:
+1. Sistema informa o ator de que um ou mais campos obrigatórios não foram
+preenchidos durante o cadastro inicial, destacando os campos problemáticos em 
+vermelho.
+2. Ator tem a possibilidade de preencher os campos ou cancelar a operação de
+cadastro.
+
+Restrições e validações:
+
+- Alguns campos existem como campos obrigatórios, um cadastro novo não pode ser
+realizado antes do preenchimento dos mesmos e uma operação de edição não pode ser
+feita sem que os mesmos estejam preenchidos por dados válidos.
+
+- Alguns campos possuem validação de dados digitados, devendo ser preenchidos
+por valores válidos vide as regras de negócio para serem considerados.
+
+- Dois cadastros com atributo chave idênticos não podem existir.
+
+---------------------------------------//---------------------------------------
+
+Gerenciar dados do Dono
+Resumo: repetição de gestão de dados do animal e consulta
