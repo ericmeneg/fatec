@@ -13,6 +13,9 @@ let mb = [[3,1],[2,4]]
 if (colA == linB){
     for (let i = 1; i <= linA; i++){
         for (let j = 1; i <= colB; j++){
+            for (let k = 1; i <= colA; k++){
+                mr[i,j] = mr[i,j] + ma[i,k] * mb[k,j]
+            }
             // algo assim mr[i,j] = (ma[i,j]*mb[i,j])+(ma[i,j+1]*mb[i,j+1])
         }
     }
