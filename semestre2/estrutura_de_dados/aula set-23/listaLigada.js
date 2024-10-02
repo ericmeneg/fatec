@@ -23,8 +23,50 @@ class LinkedList {
         this.count++
     }
 
-    insert(element,position){
+    //incompleto
+    sortInsert(element){
+        const newNode = new Node(element)
+        
+        if (this.head == null){
+            this.head = newNode
+            return true
+        }
 
+        if (element <= this.head.element){
+            newNode.Next = this.head
+            this.head = newNode
+            return true
+        }
+
+        let current = this.head
+
+        while (current.next !== undefined && current.next.element < element){
+            current = current.next
+        }
+
+        newNode.next = current.next
+        current.next = newNode
+
+        return true
+    }
+
+    insert(element,index){
+        if (index >= 0 && index <= this.count){
+            const node = new Node(element)
+            if (index === 0){
+                const current = this.head
+                node.next = current
+                this.head = node 
+            } else {
+                const previous = this.getElementAt(index-1)
+                const current = previous.next
+                node.next = current
+                previous.next = node
+            }
+            this.count++
+            return true
+        }
+        return false
     }
 
     getElementAt(index){
@@ -39,11 +81,19 @@ class LinkedList {
     }
 
     remove(element){
-
+        const index = this.indexOf(element)
+        return this.removeAt(index)
     }
 
     indexOf(element){
-
+        let current = this.head
+        for (let i = 0; i < this.count && current != null; i++){
+            if (this.equalsfn(element, current.element)){
+                return i
+            }
+            current = current.next
+        }
+        return -1
     }
     
     removeAt(index){
@@ -74,7 +124,21 @@ class LinkedList {
     }
 
     toString(){
+        if (this.head == null){
+            return ''
+        }
+        let objString =  `${this.head.element}`
+        let current = this.head.next
+        for (let i = 1; i < this.size() && current != null; i++){
+            objString = `${objString}, ${current.element}`
+            current = current.next
+        }
+        return objString
+    }
 
+    clear(){
+        this.head = undefined
+        this.count = 0
     }
 }
 
@@ -85,10 +149,39 @@ class Node{
     }
 }
 
-let listaLigada = new LinkedList()
-listaLigada.push('elemento 1')
-listaLigada.push('elemento 2')
-listaLigada.push('elemento 3')
-listaLigada.push('elemento 4')
-console.log(listaLigada.removeAt(1))
-console.log(listaLigada)
+let listaOrdenada = new LinkedList()
+let listaAlunos = [
+'ARTHUR DAVI GOMES',
+'BRUNO HENRIQUE QUERICHELLI GARCIA',
+'CAIO HENRIQUE FERREIRA DE SOUZA',
+'DANIEL BRITO DA SILVA JUNIOR',
+'DANIEL GALVAO MAGALHAES DA SILVA',
+'DAVI BERTO MANSUR DUARTE',
+'ELISA APARECIDA MARTINS DE OLIVEIRA',
+'ERIC VINICIUS DA SILVA MENEGON',
+'FELIPE AUGUSTO PEREIRA LEMES',
+'FERNANDA VICTORIA FELIX OLIVEIRA',
+'ADRIANO DOS SANTOS',
+'GIOVANI DE BIAGI ALVES',
+'VITOR CARDOSO DA CRUZ',
+'GRAZIELLA SOUZA',
+'RODRIGO MORAES DE SOUZA GARCIA',
+'HOSANA AZEVEDO PIRES',
+'JOAO PEDRO SOUZA SILVA',
+'LEONARDO VINÍCIUS GURTLER HUBERT',
+'MARCELO HENRIQUE REDUZINO',
+'WILLIAM SILVA DOS REIS',
+'NATHAN FERRACINI BATISTA',
+'GUSTAVO SILVA DE CARVALHO',
+'PEDRO HENRIQUE BONOMO SANTOS',
+'RAMON GODINHO',
+'JOAO VITOR FERNANDES DE MATOS ROCHA',
+'MATHEUS HENRIQUE ALMEIDA VIEIRA NEVES',
+'ROBSON ALAN MANTOVANI'
+]
+
+listaAlunos.forEach( (x)=>{
+    listaOrdenada.sortInsert(x)
+})
+
+console.log(listaOrdenada)
