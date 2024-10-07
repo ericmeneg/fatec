@@ -29,12 +29,14 @@ class LinkedList {
         
         if (this.head == null){
             this.head = newNode
+            this.count++
             return true
         }
 
         if (element <= this.head.element){
-            newNode.Next = this.head
+            newNode.next = this.head
             this.head = newNode
+            this.count++
             return true
         }
 
@@ -46,6 +48,7 @@ class LinkedList {
 
         newNode.next = current.next
         current.next = newNode
+        this.count++
 
         return true
     }
@@ -180,8 +183,8 @@ let listaAlunos = [
 'ROBSON ALAN MANTOVANI'
 ]
 
-listaAlunos.forEach( (x)=>{
+listaAlunos.forEach((x)=>{
     listaOrdenada.sortInsert(x)
 })
 
-console.log(listaOrdenada)
+console.log(listaOrdenada.toString())
