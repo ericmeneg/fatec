@@ -34,31 +34,49 @@ let pilha2 = new Stack()
 let pilha3 = new Stack()
 let aux // variável que armazena o valor de retorno do método stack.pop() temporariamente para inserção do valor em outra pilha
 
+function exibirPilhas(){
+    console.log(`Torre 1: ${pilha1.items}`)
+    console.log(`Torre 2: ${pilha2.items}`)
+    console.log(`Torre 3: ${pilha3.items}\n`)
+}
+
 pilha1.push(3)
 pilha1.push(2)
 pilha1.push(1)
 
+exibirPilhas()
+
 aux = pilha1.pop()
 pilha3.push(aux)
 
+exibirPilhas()
+
 aux = pilha1.pop()
 pilha2.push(aux)
+
+exibirPilhas()
 
 aux = pilha3.pop()
 pilha2.push(aux)
 
+exibirPilhas()
+
 aux = pilha1.pop()
 pilha3.push(aux)
+
+exibirPilhas()
 
 aux = pilha2.pop()
 pilha1.push(aux)
 
+exibirPilhas()
+
 aux = pilha2.pop()
 pilha3.push(aux)
+
+exibirPilhas()
 
 aux = pilha1.pop()
 pilha3.push(aux)
 
-console.log(`Torre 1: ${pilha1.items}`)
-console.log(`Torre 2: ${pilha2.items}`)
-console.log(`Torre 3: ${pilha3.items}`)
+exibirPilhas()
