@@ -22,13 +22,13 @@ class CarrinhoDeCompras {
     }
 }
 
-const produto1 = {
+const produto1: IProduto = {
     nome: 'Teclado',
     preco: 200,
     quantidadeEmEstoque: 20
 }
 
-const produto2 = {
+const produto2: IProduto = {
     nome: 'Mouse',
     preco: 120,
     quantidadeEmEstoque: 50
