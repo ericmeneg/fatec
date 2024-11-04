@@ -23,7 +23,6 @@ class LinkedList {
         this.count++
     }
 
-    //incompleto
     sortInsert(element){
         const newNode = new Node(element)
         
