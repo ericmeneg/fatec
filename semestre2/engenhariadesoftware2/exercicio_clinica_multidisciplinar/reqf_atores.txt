@@ -1,0 +1,35 @@
+Os atores do sistema são:
+- A secretaria
+- Médicos
+
+Requsitos funcionais
+
+RF01 - Manter agenda
+Funcionários da secretaria devem poder atualizar a agenda de médicos para agendar
+novas consultas, remarcar consultas, cancelar consultas, etc...
+Prioridade: essencial
+
+RF02 - Gerenciar pacientes
+Durante a triagem, o funcionário responsável deve poder cadastrar os dados do paciente no sistema,
+alterar campos relevantes, etc...
+Prioridade: importante
+
+RF03 - Consultar prontuário
+Após cada consulta, um prontuário eletrônico com a documentação do paciente é gerado, médicos devem
+poder acessar esses prontuários, se necessário
+Prioridade: importante
+
+RF04 - Manter ficha de anamnese
+Ao início da consulta o médico deve poder atualizar a ficha de anamnese do paciente com informações
+faltantes
+Prioridade: importante
+
+RF05 - Emissão de pedido médico
+Se necessário, um médico pode realizar a emissão de uma guia para exames complementares, que deve ser
+válida tanto para a própria clínica quanto para laboratórios externos.
+Prioridade: importante
+
+RF06 - Enviar resultados de exame
+Após um exame complementar realizado na própria clínica, os resultados devem poder ser enviados para
+o sistema, devidamente associados ao paciente correto, que deve também estar cadastrado.
+Prioridade: essencial
